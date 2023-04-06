@@ -3,14 +3,16 @@ import HomePage from './components/Home.page'
 import SuperheroPage from './components/Superhero.page'
 import RQSuperheroesPage from './components/RQSuperheroes.page'
 import NavBar from './components/NavBar'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 const queryClient = new QueryClient()
 
 function App() {
 
   return (
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client = { queryClient }>
+      <ReactQueryDevtools initialIsOpen = {false} />
       <div>
         <NavBar />
         <Routes>
