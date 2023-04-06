@@ -4,9 +4,14 @@ import { HeroType } from "./Superhero.page"
 export default function RQSuperheroesPage() {
 
     const fetchData: () => Promise<HeroType[]> = async () => {
-        const res = await fetch('http://localhost:4000/superheroes')
-        if(!res.ok) return Promise.reject('Whoops!')
-        return res.json() as Promise<HeroType[]>
+        try {
+            const res = await fetch('http://localhost:4000/superheroes')
+            if(!res.ok) return Promise.reject('Whoops!')
+            return res.json() as Promise<HeroType[]>
+            
+        } catch (error) {
+            throw new Error('Whoops!')
+        }
     }
 
     const { data, error, isLoading } = useQuery({
