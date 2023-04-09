@@ -1,4 +1,5 @@
 import { useSuperhero } from "../hooks/useSuperheroes"
+import { Link } from 'react-router-dom'
 
 export default function RQSuperheroesPage() {
     const onSuccess = () => {
@@ -18,10 +19,8 @@ export default function RQSuperheroesPage() {
     return <ul>
 
         {data?.map((val, index) => {
-            return <li key = {index}>
-                <div>{val.id}</div>
-                <div>{val.name}</div>
-                <div>{val.alterEgo}</div>
+            return <li className = 'text-gray-600' key = {index}>
+                <Link to={`${val.id}`}>{val.name}</Link>
                 <br />
             </li>
         })}

@@ -22,10 +22,8 @@ export default function SuperheroPage() {
     if(isLoading) return <div>Loading...</div>
     return <ul>
         {data.map(( hero, i ) => {
-            return <li key = {i}>
-                <div>{hero.id}</div>
+            return <li className = 'text-gray-600' key = {i}>
                 <div>{hero.name}</div>
-                <div>{hero.alterEgo}</div>
                 <br/>
             </li>
         })}

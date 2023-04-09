@@ -1,19 +1,45 @@
 {
     "superheroes": [
-    {
-        "id": 1,
-        "name": "Batman",
-        "alterEgo": "Bruce Wayne"
-    },
-    {
-        "id": 2,
-        "name": "Superman",
-        "alterEgo": "Clark Kent"
-    },
-    {
-        "id": 1,
-        "name": "Wonder Woman",
-        "alterEgo": "Princess Diana"
-    }
+        {
+            "id": 1,
+            "name": "Batman",
+            "alterEgo": "Bruce Wayne"
+        },
+        {
+            "id": 2,
+            "name": "Superman",
+            "alterEgo": "Clark Kent"
+        },
+        {
+            "id": 3,
+            "name": "Wonder Woman",
+            "alterEgo": "Princess Diana"
+        }
+    ],
+    "friends": [
+        {
+            "id": 1,
+            "name": "Chandler Bing"
+        },
+        {
+            "id": 2,
+            "name": "Joey Tribbiani"
+        },
+        {
+            "id": 3,
+            "name": "Rachel Green"
+        }
+    ],
+    "users": [
+        {
+            "id": "arjunthakur900@gmail.com",
+            "channelId": "nextjs"
+        }
+    ],
+    "channels": [
+        {
+            "id": "nextjs",
+            "courses": ["Next13, SSR, SSG, ISR"]
+        }
     ]
 }
