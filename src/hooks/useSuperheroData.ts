@@ -1,7 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { HeroType } from "../components/Superhero.page";
 
 export default function useSuperheroData(heroId: string) {
+
+    const queryClient = useQueryClient()
 
     const fetchHeroData = async (): Promise<HeroType> => {
         try {
@@ -14,6 +16,11 @@ export default function useSuperheroData(heroId: string) {
 
     return useQuery({
         queryKey: ['super-hero', heroId],
-        queryFn: fetchHeroData
+        queryFn: fetchHeroData,
+        initialData: () => {
+            const hero = queryClient.getQueryData<HeroType[]>(['superheroes'])?.find(hero => hero.id === parseInt(heroId))            
+            if(hero) return hero
+            return undefined
+        }
     })
 }

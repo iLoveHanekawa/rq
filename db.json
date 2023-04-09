@@ -41,5 +41,39 @@
             "id": "nextjs",
             "courses": ["Next13, SSR, SSG, ISR"]
         }
+    ],
+    "colors": [
+        {
+            "id": 1,
+            "label": "red"
+        },
+        {
+            "id": 2,
+            "label": "blue"
+        },
+        {
+            "id": 3,
+            "label": "green"
+        },
+        {
+            "id": 4,
+            "label": "orange"
+        },
+        {
+            "id": 5,
+            "label": "purple"
+        },
+        {
+            "id": 6,
+            "label": "indigo"
+        },
+        {
+            "id": 7,
+            "label": "teal"
+        },
+        {
+            "id": 8,
+            "label": "cyan"
+        }
     ]
 }
