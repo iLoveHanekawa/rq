@@ -42,10 +42,24 @@ export const useAddSuperHeroData = () => {
         // onSuccess: () => {
         //     queryClient.invalidateQueries(['superheroes'])
         // }
-        onSuccess: (data) => {
-            queryClient.setQueriesData<HeroType[]>(['superheroes'], (prev) => {
-                return [...prev as HeroType[], data]
+        // onSuccess: (data) => {
+        //     queryClient.setQueryData<HeroType[]>(['superheroes'], (prev) => {
+        //         return [...prev as HeroType[], data]
+        //     })
+        // }
+        onMutate: async (data) => {
+            await queryClient.cancelQueries(['superheroes'])
+            const prevData = queryClient.getQueryData<HeroType[]>(['superheroes'])
+            queryClient.setQueryData<HeroType[]>(['superheroes'], (prev) => {
+                return [...prev as HeroType[], { id: (prev as HeroType[]).length + 1, ...data }]
             })
-        }
+            return { prevData }
+        },
+        onError: (_error, _hero, context) => {
+            queryClient.setQueryData(['superheroes'], context?.prevData)
+        },
+        onSettled: () => {
+            queryClient.invalidateQueries(['superheroes'])
+        },
     })
 }

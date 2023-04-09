@@ -19,6 +19,11 @@
       "name": "Flash",
       "alterEgo": "Barry Allen",
       "id": 4
+    },
+    {
+      "name": "Aquaman",
+      "alterEgo": "Arthur Curry",
+      "id": 5
     }
   ],
   "friends": [
