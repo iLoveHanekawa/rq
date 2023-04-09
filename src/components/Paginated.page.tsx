@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
 import { useState } from 'react'
-type Color = {
+export type Color = {
     id: number,
     label: string
 }
