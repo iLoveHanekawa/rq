@@ -12,38 +12,13 @@
     },
     {
       "id": 3,
-      "name": "Wonder Woman",
+      "name": "Wonderwo man",
       "alterEgo": "Princess Diana"
     },
     {
-      "name": "fasdffasdfas",
-      "alterEgo": "fasd",
+      "name": "Flash",
+      "alterEgo": "Barry Allen",
       "id": 4
-    },
-    {
-      "name": "hkhl",
-      "alterEgo": "hkjhljhl",
-      "id": 5
-    },
-    {
-      "name": "faskldfj;",
-      "alterEgo": "fasfd",
-      "id": 6
-    },
-    {
-      "name": "kjsalkfdj",
-      "alterEgo": "dsafdsa",
-      "id": 7
-    },
-    {
-      "name": "kjsalkfdjsdsdfs",
-      "alterEgo": "dsafdsssa",
-      "id": 8
-    },
-    {
-      "name": "arjun",
-      "alterEgo": "dsafdsssa",
-      "id": 9
     }
   ],
   "friends": [
